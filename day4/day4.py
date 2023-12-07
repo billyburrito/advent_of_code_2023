@@ -8,16 +8,17 @@ with open('input') as fp:
         arr_num = num.strip().split()
 
         actual = list(set(arr_num).intersection(arr_win))
-        print("\nactual: " + str(actual))
-        print(len(actual))
-        count = len(actual) - 1
+        #print("\nactual: " + str(actual))
+        #print(len(actual))
+        count = len(actual)
         value = 0
         if count > 0:
             value = 1
-            for x in range(count):
+            for x in range(count-1):
                 value = value * 2
-            print("value: " + str(value))
+            #print("value: " + str(value))
             sum = sum + value
+            #print("sum: " + str(sum))
             value = 0
 
 print("part 1: " + str(sum))
